@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+    font: 1.3rem white Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    width: 87vw;
+    border: 1px dashed deeppink;
+    margin: 0 auto;
+}
+
+#button-container {
+    border: 5px dotted lawngreen;
+    margin: 3vm 2vm;
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+    margin: 3vh auto;
+}
+
+/* Center everything */
+
+#author {
+    /*width: 10vw;*/
+}
+
+h1 {
+    /*width: 30vw;*/
+}
+
+#text p {
+    text-align: center;
+}
+
+#author, h1, #text p {
+    text-align: center; /* remember this one*/
+    margin: 2vh auto;
+    border: 3px solid yellow;
+}
+
+button {
+    font-size: 1.3rem;
+    padding: 1vw;
+    cursor: default;
+}
