@@ -29,11 +29,12 @@ h1 {
     /*width: 30vw;*/
 }
 
-#text p {
+#text {
     text-align: center;
+    font-style: italic;
 }
 
-#author, h1, #text p {
+#author, h1, #text {
     text-align: center; /* remember this one*/
     margin: 2vh auto;
     border: 3px solid yellow;
