@@ -40,7 +40,7 @@ const update_texts = function (response_object) {
 
 };
 
-// link the function to the get quote button in a separated way
+// link the get quote button to the function in a separated way
 
 document.getElementById("new-quote").addEventListener("click", fetch_new_quote);
 
@@ -48,3 +48,19 @@ document.getElementById("new-quote").addEventListener("click", fetch_new_quote);
 // setup the quote fetch on load
 
 window.onload = fetch_new_quote;
+
+
+// grab the tweet button. Then have it tweet the quote
+
+// event listener
+const tweet_button = document.getElementById('tweet-quote');
+const tweet_button_listener = tweet_button.addEventListener("click", open_tweet_page);
+
+
+//  href="http://twitter.com/intent/tweet"
+
+
+const open_tweet_page = function (quote_string) {
+    
+};
+
