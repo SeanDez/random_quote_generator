@@ -35,8 +35,8 @@ const update_texts = function (response_object) {
     quote_element.innerText = parsed_response_text.quote;
     author_element.innerText = parsed_response_text.author;
 
-    console.log(parsed_response_text);
-    console.log(parsed_response_text.quote);
+    quote_text_global = parsed_response_text.quote;
+    quote_author_global = parsed_response_text.author;
 
 };
 
@@ -50,17 +50,39 @@ document.getElementById("new-quote").addEventListener("click", fetch_new_quote);
 window.onload = fetch_new_quote;
 
 
-// grab the tweet button. Then have it tweet the quote
 
-// event listener
-const tweet_button = document.getElementById('tweet-quote');
-const tweet_button_listener = tweet_button.addEventListener("click", open_tweet_page);
+
 
 
 //  href="http://twitter.com/intent/tweet"
 
 
-const open_tweet_page = function (quote_string) {
-    
+//
+
+let quote_text_global = '';
+let quote_author_global = '';
+
+
+const share_tweet = function (quote_string, author_name) {
+
+    quote_string = quote_text_global;
+    author_name = quote_author_global;
+
+    // set tweet url
+    const concated_full_url = "https://twitter.com/intent/tweet?text=\"" + quote_string + "\" -- " + author_name;
+
+    // open tweet page in new tab
+    window.open(concated_full_url, "_blank");
 };
+
+
+
+
+
+// event listener
+    // grab the tweet button.
+    // listen for a click
+const tweet_button = document.getElementById('tweet-quote');
+tweet_button.addEventListener("click", share_tweet);
+
 
